@@ -55,16 +55,24 @@ public class Controlador extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		doPost(request, response);
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		String opcion = request.getParameter("opcion");
+		String rutaJSP= "jsp/interSin"; 
+		switch (opcion){
+		case "sin":
+			rutaJSP = "interSin";
+		case "con":
+			rutaJSP = "intercon";
+			break;
+		default: break;
+		}
+		request.getRequestDispatcher(rutaJSP + ".jsp").forward(request, response);
 	}
 
 }
