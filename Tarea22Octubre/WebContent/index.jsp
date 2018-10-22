@@ -9,8 +9,8 @@
 <body>
 <h1>Listado objetos basicos</h1>
 <ol>
-	<li> <a href = "Logica">listado sin</a>
-	 <li><a href = "Logica">listado con</a>
+	<li> <a href = "jsp/interCon.jsp">listado con</a>
+	 <li><a href = "jsp/interSin.jsp">listado sin</a>
 	 
 	 </ol> 
 
